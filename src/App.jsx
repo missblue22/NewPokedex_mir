@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <PokemonCard pokemonList={pokemonList}/>
+      <PokemonCard pokemon={pokemonList[0]}/>
     </div>
   )
 }

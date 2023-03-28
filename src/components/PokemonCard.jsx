@@ -1,8 +1,6 @@
 import React from "react";
 
-function PokemonCard({pokemonList}) {
-
-    const pokemon = pokemonList[0];
+function PokemonCard({pokemon}) {
 
     return (
 
