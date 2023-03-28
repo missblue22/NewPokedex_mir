@@ -9,7 +9,7 @@ function PokemonCard({pokemon}) {
             {pokemon.imgSrc === undefined ?
                 <p>???</p>
                 :
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur" />
+                <img src={pokemon.imgSrc} alt="bulbasaur" />
             }
 
             <figcaption>{pokemon.name}</figcaption>
