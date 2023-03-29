@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 import React from 'react'
+import NavBar from './components/NavBar'
 
 const pokemonList = [
   {
@@ -45,11 +46,7 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-      <div style={{display: "flex", justifyContent:"space-around"}}>
-        {pokemonIndex > 0 ? <button onClick={handleMinusIndex}>Previous Pokémon</button> : null}
-        {pokemonIndex < pokemonList.length - 1 ? <button onClick={handlePlusIndex}>Next Pokémon</button> : null}
-        
-      </div>
+      <NavBar minusClick={handleMinusIndex} plusClick={handlePlusIndex} pokemonIndex={pokemonIndex} maxIndex={pokemonList.length - 1} />
     </div>
   )
 }
