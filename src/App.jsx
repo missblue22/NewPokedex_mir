@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import React from "react";
+import NavBar from './components/NavBar'
 
 const pokemonList = [
   {
@@ -43,7 +44,7 @@ function App() {
 
   useEffect(() => {
     alert("Bienvenue Pokemon Fans ;) !");
-  }, 
+
   []
   );
 
@@ -68,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
