@@ -1,7 +1,6 @@
 import React from "react";
 
-function NavBar({ minusClick, plusClick, pokemonIndex, maxIndex }) {
-    pokemonIndex=== 3 alert ("pika pikachuuuu !!");
+function NavBar({ pokemonList, handleClick }) {
     
     return (
         <div style={{ display: "flex", justifyContent: "space-around" }}>

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import React from "react";
@@ -35,31 +33,18 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  const handleNext = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  };
-  const handlePrevious = () => {
-    setPokemonIndex(pokemonIndex - 1);
-  };
-
   function handleClickIndex (index) {
     setPokemonIndex(index)
   }
 
-  useEffect(() => {
-    alert("Bienvenue Pokemon Fans ;) !");
-
-  []
-  );
+}
 
   return (
     <div>
-      <PokemonCard pokemon={pokemonList[pokemonIndex]}
-       <NavBar pokemonList={pokemonList} handleClick={handleClickIndex}/>
-   
-   
+      <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
+      <NavBar pokemonList={pokemonList} handleClick={handleClickIndex}/>
     </div>
   );
-}
 
-export default App
+
+export default App;
