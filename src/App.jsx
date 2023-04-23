@@ -42,6 +42,10 @@ function App() {
     setPokemonIndex(pokemonIndex - 1);
   };
 
+  function handleClickIndex (index) {
+    setPokemonIndex(index)
+  }
+
   useEffect(() => {
     alert("Bienvenue Pokemon Fans ;) !");
 
@@ -50,21 +54,10 @@ function App() {
 
   return (
     <div>
-      <PokemonCard
-        pokemonName={pokemonList[pokemonIndex].name}
-        pokemonIMG={pokemonList[pokemonIndex].imgSrc}
-      />
-      {/*      
-                <p>{pokemon.name}</p> 
-                  {pokemon.imgSrc} */}
-      <div>
-        {pokemonIndex > 0 ? (
-          <button onClick={handlePrevious}>PREVIOUS</button>
-        ) : null}
-        {pokemonIndex < pokemonList.length - 1 ? (
-          <button onClick={handleNext}>NEXT</button>
-        ) : null}
-      </div>
+      <PokemonCard pokemon={pokemonList[pokemonIndex]}
+       <NavBar pokemonList={pokemonList} handleClick={handleClickIndex}/>
+   
+   
     </div>
   );
 }
